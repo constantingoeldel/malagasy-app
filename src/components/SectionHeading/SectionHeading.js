@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
 });
-export default function SectionHeading({label, value}) {
+export default function SectionHeading({label, value}) { // why value and label?
   return (
     <SafeAreaView style={styles.container}>
       <Text style={[styles.text, {color: '#111827'}]}>

@@ -17,7 +17,7 @@ export default function List({data, text, onPress, navigation}) {
             onPress={() => {
               navigation.navigate('Learn', {
                 text: item.name.en,
-                itemId1: item.phrasesIds.map(item => item),
+                itemId1: item.phrasesIds.map(item => item), // Why Id<1>? Why do you need to map? itemId is a bad name to describe category
               });
             }}
           />

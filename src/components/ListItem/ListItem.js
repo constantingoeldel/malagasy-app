@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function ListItem({text, textColor, onPress}) {
+export default function ListItem({text, textColor, onPress}) { // the label and the icon should be props as they can change. Use the action button component
   return (
     <TouchableOpacity style={styles.list} onPress={onPress}>
       <Text style={[styles.listText, {color: `${textColor}`}]}>{text}</Text>

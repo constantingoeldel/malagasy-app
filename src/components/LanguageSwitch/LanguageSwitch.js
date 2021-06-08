@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
 });
 export default function LanguageSwitch({
-  text1,
+  text1, // its good that it is language-agnostic but something like primary language, secondary language would be better
   text2,
   name,
   color,

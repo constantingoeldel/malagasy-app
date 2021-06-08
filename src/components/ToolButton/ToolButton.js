@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
 });
-
+// They just look completely distorted to me. If this is an issue on my end, please let me know.
 export default function ToolButton({type, onPress, name}) {
   return (
     <View style={styles.container}>

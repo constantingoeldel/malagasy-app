@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     lineHeight: 19,
   },
 });
+// This component should not be concerned with the logic of being wrong or right. Just pass the corresponding icon and color 
 export default function ActionButtons({
   optionText,
   name,
@@ -50,7 +51,7 @@ export default function ActionButtons({
   const wrong = isClicked && wrongAnswer !== phrase && wrongAnswer === item;
   return (
     <TouchableOpacity
-      onPress={() => selectAnswer(item)}
+      onPress={() => selectAnswer(item)/* You pass an item but expect an event in line 41*/}
       style={styles.container}>
       <Text>{optionText}</Text>
       <View style={styles.buttonContainer}>

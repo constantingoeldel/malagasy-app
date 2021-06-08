@@ -13,26 +13,26 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 });
-export default function LearnScreen({
+export default function LearningScreen({
   onPress = () => {},
   navigation,
-  onChange,
+  onChange, // in List.js, you only pass text and category, none of the other props.
   disabled,
   style,
   route,
   text,
   name,
 }) {
-  const [answerText, setAnswerText] = useState([]);
+  const [answerText, setAnswerText] = useState([]); // This implies a singular answer text when in reality it is multiple objects
   const [phrase, setPhrase] = useState({});
   const [isClicked, setIsClicked] = useState(false);
   const [target, setTarget] = useState({});
   const [wrongAnswer, setWrongAnswer] = useState({});
   function getData() {
-    let indexes = new Set([
+    let indexes = new Set([ // Nice use of set to prevent duplicates
       Math.floor(Math.random() * route.params.itemId1.length),
     ]);
-    while (indexes.size < route.params.itemId1.length) {
+    while (indexes.size < route.params.itemId1.length) { // You don't need to have that many indexes, 4 are enough. Why not get the ids directly?
       indexes.add(Math.floor(Math.random() * route.params.itemId1.length));
     }
     indexes = [...indexes];
@@ -43,7 +43,7 @@ export default function LearnScreen({
     const option1 = PhraseData.phrases.find(item => item.id === answerOption1);
     const option2 = PhraseData.phrases.find(item => item.id === answerOption2);
     const option3 = PhraseData.phrases.find(item => item.id === answerOption3);
-    const option4 = PhraseData.phrases.find(item => item.id === answerOption4);
+    const option4 = PhraseData.phrases.find(item => item.id === answerOption4); // This can be done with way less variable declarations and lines of code 
     const answerOptions = [option3, option1, option4, option2].sort(() => {
       return 0.5 - Math.random();
     });

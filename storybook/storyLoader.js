@@ -10,6 +10,7 @@ function loadStories() {
   require('../src/components/List/List.stories');
   require('../src/components/ListItem/ListItem.stories');
   require('../src/components/MyComponent/MyComponent.stories');
+  require('../src/components/NextButton/NextButton.stories');
   require('../src/components/PhraseTextArea/PhraseTextArea.stories');
   require('../src/components/SectionHeading/SectionHeading.stories');
   require('../src/components/ToolButton/ToolButton.stories');
@@ -24,6 +25,7 @@ const stories = [
   '../src/components/List/List.stories',
   '../src/components/ListItem/ListItem.stories',
   '../src/components/MyComponent/MyComponent.stories',
+  '../src/components/NextButton/NextButton.stories',
   '../src/components/PhraseTextArea/PhraseTextArea.stories',
   '../src/components/SectionHeading/SectionHeading.stories',
   '../src/components/ToolButton/ToolButton.stories',
